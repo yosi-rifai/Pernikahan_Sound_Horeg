@@ -1,0 +1,837 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Undangan Digital Pernikahan Reza & Anindya – Sound Horeg Festival Wedding"
+    />
+    <title>Undangan Pernikahan | Nama kamu &amp; Nama pasanganmu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ===== SESSION EXPIRED OVERLAY ===== -->
+    <div
+      id="session-overlay"
+      class="session-overlay hidden"
+      role="alertdialog"
+      aria-modal="true"
+      aria-labelledby="overlay-title"
+    >
+      <div class="overlay-box">
+        <div class="overlay-icon">⏰</div>
+        <h2 id="overlay-title" class="overlay-title">
+          Sesi Undangan Telah Berakhir
+        </h2>
+        <p class="overlay-message">
+          Silakan buka kembali undangan ini untuk melanjutkan.
+        </p>
+        <button id="btn-reopen" class="btn-overlay">Buka Kembali</button>
+      </div>
+    </div>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <div id="main-content">
+      <!-- ============================
+         SECTION 1: COVER / OPENING
+         ============================ -->
+      <section id="cover" class="cover-section" aria-label="Cover Undangan">
+        <!-- Festival string lights -->
+        <div class="string-lights" aria-hidden="true">
+          <span class="bulb b-red"></span><span class="bulb b-yellow"></span>
+          <span class="bulb b-green"></span><span class="bulb b-blue"></span>
+          <span class="bulb b-red"></span><span class="bulb b-yellow"></span>
+          <span class="bulb b-green"></span><span class="bulb b-blue"></span>
+          <span class="bulb b-red"></span><span class="bulb b-yellow"></span>
+          <span class="bulb b-green"></span><span class="bulb b-blue"></span>
+          <span class="bulb b-red"></span><span class="bulb b-yellow"></span>
+          <span class="bulb b-green"></span><span class="bulb b-blue"></span>
+        </div>
+
+        <!-- Spotlight beams -->
+        <div class="spotlights" aria-hidden="true">
+          <div class="spotlight sp-left"></div>
+          <div class="spotlight sp-center"></div>
+          <div class="spotlight sp-right"></div>
+        </div>
+
+        <!-- Floating particles -->
+        <div class="particles" aria-hidden="true">
+          <span class="particle"></span><span class="particle"></span>
+          <span class="particle"></span><span class="particle"></span>
+          <span class="particle"></span><span class="particle"></span>
+          <span class="particle"></span><span class="particle"></span>
+        </div>
+
+        <!-- TRUCK SVG ILLUSTRATION -->
+        <div
+          class="truck-container"
+          role="img"
+          aria-label="Ilustrasi Truk Sound Horeg"
+        >
+          <svg
+            id="horeg-truck"
+            viewBox="0 0 820 300"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <!-- Road -->
+            <rect x="0" y="268" width="820" height="32" fill="#060b14" />
+            <rect
+              x="40"
+              y="272"
+              width="50"
+              height="4"
+              fill="#FFD700"
+              opacity="0.25"
+              rx="2"
+            />
+            <rect
+              x="200"
+              y="272"
+              width="50"
+              height="4"
+              fill="#FFD700"
+              opacity="0.25"
+              rx="2"
+            />
+            <rect
+              x="360"
+              y="272"
+              width="50"
+              height="4"
+              fill="#FFD700"
+              opacity="0.25"
+              rx="2"
+            />
+            <rect
+              x="520"
+              y="272"
+              width="50"
+              height="4"
+              fill="#FFD700"
+              opacity="0.25"
+              rx="2"
+            />
+            <rect
+              x="680"
+              y="272"
+              width="50"
+              height="4"
+              fill="#FFD700"
+              opacity="0.25"
+              rx="2"
+            />
+            <!-- Flatbed -->
+            <rect
+              x="200"
+              y="184"
+              width="580"
+              height="84"
+              fill="#0e1d35"
+              rx="4"
+            />
+            <rect
+              x="205"
+              y="188"
+              width="570"
+              height="6"
+              fill="#162840"
+              rx="2"
+            />
+            <rect
+              x="205"
+              y="257"
+              width="570"
+              height="6"
+              fill="#162840"
+              rx="2"
+            />
+            <!-- Cab body -->
+            <path
+              d="M68,178 L68,268 L218,268 L218,148 L145,128 L105,128 Z"
+              fill="#0e2d4a"
+            />
+            <path d="M68,178 L68,268 L88,268 L88,168 Z" fill="#0b2238" />
+            <path d="M88,168 L88,196 L218,196 L218,148 Z" fill="#103355" />
+            <!-- Windshield -->
+            <path
+              d="M98,140 L98,180 L212,180 L212,148 L163,132 Z"
+              fill="#4FC3F7"
+              opacity="0.25"
+            />
+            <path
+              d="M98,140 L98,180 L212,180 L212,148 L163,132 Z"
+              fill="none"
+              stroke="#4FC3F7"
+              stroke-width="2"
+              opacity="0.55"
+            />
+            <!-- Door -->
+            <rect
+              x="98"
+              y="185"
+              width="116"
+              height="80"
+              fill="#0b2a45"
+              rx="4"
+            />
+            <rect
+              x="108"
+              y="193"
+              width="96"
+              height="42"
+              fill="#4FC3F7"
+              opacity="0.18"
+              rx="3"
+            />
+            <rect
+              x="162"
+              y="244"
+              width="34"
+              height="5"
+              fill="#4FC3F7"
+              rx="2"
+              opacity="0.7"
+            />
+            <!-- Headlight -->
+            <rect x="70" y="185" width="17" height="26" fill="#FFD700" rx="3" />
+            <rect
+              x="70"
+              y="185"
+              width="17"
+              height="26"
+              fill="none"
+              stroke="#FFD700"
+              stroke-width="2"
+              rx="3"
+              opacity="0.5"
+            />
+            <!-- Exhaust -->
+            <rect
+              x="207"
+              y="128"
+              width="10"
+              height="52"
+              fill="#1a1a2e"
+              rx="5"
+            />
+            <!-- Cab top lights bar -->
+            <rect x="80" y="124" width="138" height="7" fill="#131326" rx="3" />
+            <circle cx="94" cy="127" r="3" fill="#ff4444" />
+            <circle cx="110" cy="127" r="3" fill="#ffdd00" />
+            <circle cx="126" cy="127" r="3" fill="#44ff88" />
+            <circle cx="142" cy="127" r="3" fill="#00ccff" />
+            <circle cx="158" cy="127" r="3" fill="#aa44ff" />
+            <circle cx="174" cy="127" r="3" fill="#ff4444" />
+            <circle cx="190" cy="127" r="3" fill="#ffdd00" />
+            <circle cx="206" cy="127" r="3" fill="#44ff88" />
+            <!-- LED BAR (full width above speakers) -->
+            <rect
+              x="214"
+              y="55"
+              width="556"
+              height="16"
+              fill="#090f1d"
+              rx="8"
+            />
+            <circle cx="232" cy="63" r="4" fill="#ff3333" />
+            <circle cx="250" cy="63" r="4" fill="#ff8800" />
+            <circle cx="268" cy="63" r="4" fill="#ffff00" />
+            <circle cx="286" cy="63" r="4" fill="#44ff88" />
+            <circle cx="304" cy="63" r="4" fill="#00ccff" />
+            <circle cx="322" cy="63" r="4" fill="#4488ff" />
+            <circle cx="340" cy="63" r="4" fill="#aa44ff" />
+            <circle cx="358" cy="63" r="4" fill="#ff3333" />
+            <circle cx="376" cy="63" r="4" fill="#ff8800" />
+            <circle cx="394" cy="63" r="4" fill="#ffff00" />
+            <circle cx="412" cy="63" r="4" fill="#44ff88" />
+            <circle cx="430" cy="63" r="4" fill="#00ccff" />
+            <circle cx="448" cy="63" r="4" fill="#4488ff" />
+            <circle cx="466" cy="63" r="4" fill="#aa44ff" />
+            <circle cx="484" cy="63" r="4" fill="#ff3333" />
+            <circle cx="502" cy="63" r="4" fill="#ff8800" />
+            <circle cx="520" cy="63" r="4" fill="#ffff00" />
+            <circle cx="538" cy="63" r="4" fill="#44ff88" />
+            <circle cx="556" cy="63" r="4" fill="#00ccff" />
+            <circle cx="574" cy="63" r="4" fill="#4488ff" />
+            <circle cx="592" cy="63" r="4" fill="#aa44ff" />
+            <circle cx="610" cy="63" r="4" fill="#ff3333" />
+            <circle cx="628" cy="63" r="4" fill="#ff8800" />
+            <circle cx="646" cy="63" r="4" fill="#ffff00" />
+            <circle cx="664" cy="63" r="4" fill="#44ff88" />
+            <circle cx="682" cy="63" r="4" fill="#00ccff" />
+            <circle cx="700" cy="63" r="4" fill="#4488ff" />
+            <circle cx="718" cy="63" r="4" fill="#aa44ff" />
+            <circle cx="736" cy="63" r="4" fill="#ff3333" />
+            <circle cx="754" cy="63" r="4" fill="#ff8800" />
+            <!-- SPEAKER 1 -->
+            <rect
+              x="218"
+              y="71"
+              width="128"
+              height="113"
+              fill="#050d1a"
+              rx="7"
+              stroke="#162840"
+              stroke-width="2"
+            />
+            <rect
+              x="226"
+              y="79"
+              width="112"
+              height="97"
+              fill="#091526"
+              rx="4"
+            />
+            <circle cx="282" cy="128" r="40" fill="#0c1822" />
+            <circle cx="282" cy="128" r="30" fill="#111f2c" />
+            <circle cx="282" cy="128" r="20" fill="#1a2d3c" />
+            <circle cx="282" cy="128" r="10" fill="#243444" />
+            <circle cx="282" cy="128" r="4" fill="#87CEEB" />
+            <!-- SPEAKER 2 -->
+            <rect
+              x="358"
+              y="71"
+              width="128"
+              height="113"
+              fill="#050d1a"
+              rx="7"
+              stroke="#162840"
+              stroke-width="2"
+            />
+            <rect
+              x="366"
+              y="79"
+              width="112"
+              height="97"
+              fill="#091526"
+              rx="4"
+            />
+            <circle cx="422" cy="128" r="40" fill="#0c1822" />
+            <circle cx="422" cy="128" r="30" fill="#111f2c" />
+            <circle cx="422" cy="128" r="20" fill="#1a2d3c" />
+            <circle cx="422" cy="128" r="10" fill="#243444" />
+            <circle cx="422" cy="128" r="4" fill="#87CEEB" />
+            <!-- SPEAKER 3 -->
+            <rect
+              x="498"
+              y="71"
+              width="128"
+              height="113"
+              fill="#050d1a"
+              rx="7"
+              stroke="#162840"
+              stroke-width="2"
+            />
+            <rect
+              x="506"
+              y="79"
+              width="112"
+              height="97"
+              fill="#091526"
+              rx="4"
+            />
+            <circle cx="562" cy="128" r="40" fill="#0c1822" />
+            <circle cx="562" cy="128" r="30" fill="#111f2c" />
+            <circle cx="562" cy="128" r="20" fill="#1a2d3c" />
+            <circle cx="562" cy="128" r="10" fill="#243444" />
+            <circle cx="562" cy="128" r="4" fill="#87CEEB" />
+            <!-- SPEAKER 4 (smaller) -->
+            <rect
+              x="638"
+              y="100"
+              width="88"
+              height="84"
+              fill="#050d1a"
+              rx="6"
+              stroke="#162840"
+              stroke-width="2"
+            />
+            <rect
+              x="645"
+              y="107"
+              width="74"
+              height="69"
+              fill="#091526"
+              rx="3"
+            />
+            <circle cx="682" cy="142" r="26" fill="#0c1822" />
+            <circle cx="682" cy="142" r="18" fill="#111f2c" />
+            <circle cx="682" cy="142" r="10" fill="#1a2d3c" />
+            <circle cx="682" cy="142" r="4" fill="#4FC3F7" />
+            <!-- Sound wave rings (animated via CSS) -->
+            <g class="sound-wave-svg">
+              <circle
+                cx="282"
+                cy="128"
+                r="54"
+                fill="none"
+                stroke="#87CEEB"
+                stroke-width="1.5"
+                opacity="0.2"
+              />
+              <circle
+                cx="282"
+                cy="128"
+                r="68"
+                fill="none"
+                stroke="#4FC3F7"
+                stroke-width="1"
+                opacity="0.15"
+              />
+            </g>
+            <g class="sound-wave-svg-2">
+              <circle
+                cx="562"
+                cy="128"
+                r="54"
+                fill="none"
+                stroke="#87CEEB"
+                stroke-width="1.5"
+                opacity="0.2"
+              />
+              <circle
+                cx="562"
+                cy="128"
+                r="68"
+                fill="none"
+                stroke="#4FC3F7"
+                stroke-width="1"
+                opacity="0.15"
+              />
+            </g>
+            <!-- WHEELS -->
+            <circle cx="134" cy="270" r="28" fill="#07101e" />
+            <circle cx="134" cy="270" r="19" fill="#0d1724" />
+            <circle cx="134" cy="270" r="10" fill="#131f30" />
+            <circle cx="134" cy="270" r="4" fill="#1c2a3e" />
+            <circle cx="355" cy="270" r="30" fill="#07101e" />
+            <circle cx="355" cy="270" r="21" fill="#0d1724" />
+            <circle cx="355" cy="270" r="12" fill="#131f30" />
+            <circle cx="355" cy="270" r="5" fill="#1c2a3e" />
+            <circle cx="430" cy="270" r="30" fill="#07101e" />
+            <circle cx="430" cy="270" r="21" fill="#0d1724" />
+            <circle cx="430" cy="270" r="12" fill="#131f30" />
+            <circle cx="430" cy="270" r="5" fill="#1c2a3e" />
+            <circle cx="625" cy="270" r="30" fill="#07101e" />
+            <circle cx="625" cy="270" r="21" fill="#0d1724" />
+            <circle cx="625" cy="270" r="12" fill="#131f30" />
+            <circle cx="625" cy="270" r="5" fill="#1c2a3e" />
+            <circle cx="710" cy="270" r="30" fill="#07101e" />
+            <circle cx="710" cy="270" r="21" fill="#0d1724" />
+            <circle cx="710" cy="270" r="12" fill="#131f30" />
+            <circle cx="710" cy="270" r="5" fill="#1c2a3e" />
+          </svg>
+        </div>
+
+        <!-- Cover text & CTA -->
+        <div class="cover-content">
+          <p class="cover-eyebrow">♪ Sound Horeg Festival Wedding ♪</p>
+          <p class="cover-label">Undangan Pernikahan</p>
+          <h1 class="couple-names-cover">
+            <span class="groom-name-cover">Nama kamu</span>
+            <span class="cover-amp">&amp;</span>
+            <span class="bride-name-cover">Nama pasanganmu</span>
+          </h1>
+          <p class="cover-date-text">Sabtu, 12 April 2025</p>
+          <p class="cover-loc-text">Gedung Serbaguna Nusantara · Yogyakarta</p>
+          <button
+            id="btn-open-invitation"
+            class="btn-primary btn-open"
+            aria-label="Buka undangan pernikahan"
+          >
+            🎉 Buka Undangan
+          </button>
+        </div>
+
+        <!-- Session countdown timer (visible after open) -->
+        <div id="session-timer" class="session-timer hidden" aria-live="polite">
+          <span>⏱</span> <span id="timer-display">05:00</span>
+        </div>
+      </section>
+
+      <!-- ============================
+         INVITATION CONTENT WRAPPER
+         ============================ -->
+      <div id="invitation-wrapper" class="invitation-wrapper hidden">
+        <!-- ============================
+           SECTION 2: DOA SYUKUR
+           ============================ -->
+        <section
+          id="prayer"
+          class="section prayer-section"
+          aria-label="Doa Syukur"
+        >
+          <div class="section-container">
+            <div class="section-badge">✦</div>
+            <h2 class="section-title">Doa Syukur</h2>
+            <div class="prayer-body">
+              <p class="arabic-text">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
+              <p class="arabic-translation">
+                Dengan menyebut nama Allah Yang Maha Pengasih lagi Maha
+                Penyayang
+              </p>
+              <p class="prayer-para">
+                Maha Suci Allah yang telah menciptakan manusia
+                berpasang-pasangan. Dengan penuh rasa syukur kehadirat Allah
+                SWT, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dan turut
+                mendoakan dalam momen paling berbahagia dalam kehidupan kami.
+              </p>
+              <blockquote class="prayer-quote">
+                "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan
+                pasangan-pasangan untukmu dari jenismu sendiri, agar kamu
+                cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di
+                antaramu rasa kasih dan sayang."
+                <cite>— QS. Ar-Rum: 21 —</cite>
+              </blockquote>
+              <p class="prayer-para">
+                Semoga pernikahan ini menjadi awal dari kehidupan rumah tangga
+                yang sakinah, mawaddah, warahmah. Kehadiran dan doa restu
+                Bapak/Ibu/Saudara/i merupakan kebahagiaan dan kehormatan
+                terbesar bagi kami sekeluarga.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================
+           SECTION 3: MEMPELAI
+           ============================ -->
+        <section
+          id="couple"
+          class="section couple-section"
+          aria-label="Profil Mempelai"
+        >
+          <div class="section-container">
+            <div class="section-badge">💍</div>
+            <h2 class="section-title">Mempelai</h2>
+            <p class="section-subtitle">
+              Dua insan yang dipersatukan oleh cinta
+            </p>
+            <div class="couple-cards">
+              <!-- Groom -->
+              <div class="couple-card" id="groom-card">
+                <div class="photo-frame">
+                  <div class="photo-placeholder">
+                    <span class="photo-emoji">👨</span>
+                    <span class="photo-hint">Foto Mempelai Pria</span>
+                  </div>
+                </div>
+                <div class="couple-info">
+                  <span class="couple-role">Mempelai Pria</span>
+                  <h3 class="couple-name">Nama kamu</h3>
+                  <p class="couple-parents">
+                    Putra dari:<br />
+                    <strong>Bpk. Nama Ayah</strong><br />
+                    &amp; <strong>Ibu Nama Ibu</strong>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Heart divider -->
+              <div class="heart-divider" aria-hidden="true">
+                <div class="heart-pulse">❤</div>
+              </div>
+
+              <!-- Bride -->
+              <div class="couple-card" id="bride-card">
+                <div class="photo-frame">
+                  <div class="photo-placeholder bride-ph">
+                    <span class="photo-emoji">👰</span>
+                    <span class="photo-hint">Foto Mempelai Wanita</span>
+                  </div>
+                </div>
+                <div class="couple-info">
+                  <span class="couple-role">Mempelai Wanita</span>
+                  <h3 class="couple-name">Nama pasanganmu</h3>
+                  <p class="couple-parents">
+                    Putri dari:<br />
+                    <strong>Bpk. Nama Ayah</strong><br />
+                    &amp; <strong>Ibu Nama Ibu</strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================
+           SECTION 4: MAPS LOKASI
+           ============================ -->
+        <section
+          id="maps"
+          class="section maps-section"
+          aria-label="Lokasi Pernikahan"
+        >
+          <div class="section-container">
+            <div class="section-badge">📍</div>
+            <h2 class="section-title">Lokasi Pernikahan</h2>
+            <p class="section-subtitle">
+              Bergabunglah bersama kami di hari istimewa ini
+            </p>
+
+            <div class="event-details-grid">
+              <div class="event-detail-card">
+                <span class="detail-icon">📅</span>
+                <span class="detail-label">Hari, Tanggal</span>
+                <span class="detail-value">Sabtu, 12 April 2025</span>
+              </div>
+              <div class="event-detail-card">
+                <span class="detail-icon">🕐</span>
+                <span class="detail-label">Waktu</span>
+                <span class="detail-value">09.00 – 14.00 WIB</span>
+              </div>
+              <div class="event-detail-card">
+                <span class="detail-icon">🏛️</span>
+                <span class="detail-label">Tempat</span>
+                <span class="detail-value"
+                  >Gedung Serbaguna Nusantara<br />Jl. Magelang No. 123,
+                  Yogyakarta</span
+                >
+              </div>
+            </div>
+
+            <div class="map-frame">
+              <iframe
+                id="wedding-map"
+                title="Lokasi Pernikahan – Yogyakarta"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126748.77!2d110.264282!3d-7.797185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5787bd5b6bc5%3A0x1e6e75d3b84c6994!2sYogyakarta!5e0!3m2!1sen!2sid!4v1710000000000!5m2!1sen!2sid"
+                width="100%"
+                height="340"
+                style="border: 0"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
+
+            <div class="maps-actions">
+              <a
+                id="btn-open-maps"
+                href="https://maps.google.com/?q=Yogyakarta"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-primary"
+              >
+                🗺️ Buka di Google Maps
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================
+           SECTION 5: RSVP
+           ============================ -->
+        <section
+          id="rsvp"
+          class="section rsvp-section"
+          aria-label="Konfirmasi Kehadiran"
+        >
+          <div class="section-container">
+            <div class="section-badge">📝</div>
+            <h2 class="section-title">Konfirmasi Kehadiran</h2>
+            <p class="section-subtitle">Mohon konfirmasi kehadiran Anda</p>
+
+            <!-- Form -->
+            <div class="rsvp-form-wrapper">
+              <form id="rsvp-form" class="rsvp-form" novalidate>
+                <div class="form-group">
+                  <label for="rsvp-name" class="form-label"
+                    >👤 Nama Tamu <span class="req">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="rsvp-name"
+                    class="form-input"
+                    placeholder="Nama lengkap Anda"
+                    required
+                    maxlength="100"
+                    autocomplete="name"
+                  />
+                  <span class="form-error" id="name-error"></span>
+                </div>
+                <div class="form-group">
+                  <label for="rsvp-attendance" class="form-label"
+                    >✅ Kehadiran <span class="req">*</span></label
+                  >
+                  <select
+                    id="rsvp-attendance"
+                    class="form-input form-select"
+                    required
+                  >
+                    <option value="">-- Pilih Status --</option>
+                    <option value="Hadir">Hadir</option>
+                    <option value="Tidak Hadir">Tidak Hadir</option>
+                    <option value="Mungkin Hadir">Mungkin Hadir</option>
+                  </select>
+                  <span class="form-error" id="attendance-error"></span>
+                </div>
+                <div class="form-group">
+                  <label for="rsvp-count" class="form-label"
+                    >👥 Jumlah Tamu <span class="req">*</span></label
+                  >
+                  <input
+                    type="number"
+                    id="rsvp-count"
+                    class="form-input"
+                    min="1"
+                    max="10"
+                    placeholder="1 – 10 orang"
+                    required
+                  />
+                  <span class="form-error" id="count-error"></span>
+                </div>
+                <div class="form-group">
+                  <label for="rsvp-message" class="form-label"
+                    >💌 Ucapan &amp; Doa</label
+                  >
+                  <textarea
+                    id="rsvp-message"
+                    class="form-input form-textarea"
+                    placeholder="Tulis ucapan untuk kedua mempelai..."
+                    rows="4"
+                    maxlength="500"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  id="btn-rsvp-submit"
+                  class="btn-primary btn-full"
+                >
+                  💌 Kirim Konfirmasi
+                </button>
+                <div id="rsvp-success" class="rsvp-success hidden">
+                  ✅ Terima kasih! Konfirmasi kehadiran Anda telah diterima.
+                </div>
+              </form>
+            </div>
+
+            <!-- RSVP list -->
+            <div class="rsvp-list-section">
+              <h3 class="rsvp-list-title">
+                💬 Ucapan &amp; Konfirmasi Tamu
+                <span id="rsvp-count-badge" class="rsvp-badge">0</span>
+              </h3>
+              <div id="rsvp-list" class="rsvp-list" aria-live="polite">
+                <div id="rsvp-empty" class="rsvp-empty">
+                  Belum ada konfirmasi. Jadilah yang pertama! 🎉
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================
+           SECTION 6: PERJALANAN CINTA
+           ============================ -->
+        <section
+          id="timeline"
+          class="section timeline-section"
+          aria-label="Perjalanan Cinta"
+        >
+          <div class="section-container">
+            <div class="section-badge">💑</div>
+            <h2 class="section-title">Perjalanan Cinta</h2>
+            <p class="section-subtitle">
+              Momen berharga yang mengukir kisah kita
+            </p>
+
+            <div class="timeline" id="timeline-container">
+              <div class="tl-item tl-left" data-animate>
+                <div class="tl-dot">🌟</div>
+                <div class="tl-content">
+                  <span class="tl-date">14 Februari 2022</span>
+                  <h3 class="tl-title">Pertemuan Pertama</h3>
+                  <p class="tl-desc">
+                    Takdir mempertemukan kami di Festival Musik Nusantara. Di
+                    antara gemuruh musik dan cahaya panggung, pandangan pertama
+                    itu meninggalkan jejak yang tak terlupakan.
+                  </p>
+                </div>
+              </div>
+
+              <div class="tl-item tl-right" data-animate>
+                <div class="tl-dot">💞</div>
+                <div class="tl-content">
+                  <span class="tl-date">20 Agustus 2023</span>
+                  <h3 class="tl-title">Jadian</h3>
+                  <p class="tl-desc">
+                    Di bawah langit malam yang penuh bintang, kami memutuskan
+                    untuk melangkah bersama sebagai sepasang kekasih.
+                  </p>
+                </div>
+              </div>
+
+              <div class="tl-item tl-left" data-animate>
+                <div class="tl-dot">💍</div>
+                <div class="tl-content">
+                  <span class="tl-date">25 Desember 2024</span>
+                  <h3 class="tl-title">Lamaran</h3>
+                  <p class="tl-desc">
+                    Dengan penuh keberanian dan cinta yang tulus, sebuah cincin
+                    dipersembahkan sebagai simbol janji setia seumur hidup.
+                  </p>
+                </div>
+              </div>
+
+              <div class="tl-item tl-right" data-animate>
+                <div class="tl-dot">💒</div>
+                <div class="tl-content">
+                  <span class="tl-date">12 April 2025</span>
+                  <h3 class="tl-title">Pernikahan</h3>
+                  <p class="tl-desc">
+                    Dengan ridho Allah SWT dan restu kedua orang tua, kami resmi
+                    menjadi satu dalam ikatan suci pernikahan. Ini baru
+                    permulaan! 🎊
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================
+           SECTION 7: FOOTER
+           ============================ -->
+        <footer id="footer" class="footer-section" aria-label="Penutup">
+          <!-- Footer string lights -->
+          <div class="string-lights footer-lights" aria-hidden="true">
+            <span class="bulb b-red"></span><span class="bulb b-yellow"></span>
+            <span class="bulb b-green"></span><span class="bulb b-blue"></span>
+            <span class="bulb b-red"></span><span class="bulb b-yellow"></span>
+            <span class="bulb b-green"></span><span class="bulb b-blue"></span>
+            <span class="bulb b-red"></span><span class="bulb b-yellow"></span>
+            <span class="bulb b-green"></span><span class="bulb b-blue"></span>
+          </div>
+
+          <div class="footer-content">
+            <div class="footer-heart">❤</div>
+            <h2 class="footer-names">nama kamu &amp; nama pasanganmu</h2>
+            <p class="footer-tagline">12 April 2025 · Yogyakarta</p>
+            <div class="footer-divider-line"></div>
+            <p class="footer-thanks">
+              Terima kasih telah hadir dan mendoakan kami.<br />
+              Kehadiran Anda adalah hadiah terindah bagi kami.
+            </p>
+            <p class="footer-closing">
+              💙 Dengan penuh cinta &amp; rasa syukur 💙
+            </p>
+            <p class="footer-credit">Sound Horeg Festival Wedding · 2025</p>
+          </div>
+        </footer>
+      </div>
+      <!-- end #invitation-wrapper -->
+    </div>
+    <!-- end #main-content -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
